@@ -67,6 +67,9 @@ public class EcoGnomePlugin: Singleton<EcoGnomePlugin>, IModKitPlugin, IInitiali
         DataExporter.ExportAll();
     }
 
+    public override string ToString() {
+        return Localizer.DoStr("EcoGnome");
+    }
     public object GetEditObject() => this.config.Config;
     public void OnEditObjectChanged(object o, string param) { this.SaveConfig(); }
 }
